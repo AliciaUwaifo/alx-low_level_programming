@@ -11,29 +11,28 @@
  */
 int main(void)
 {
-	int i, j, k;
+	int d = 48, a = 48;
 
-	i = 0;
-
-		while (i < 100)
+	while (d < 58)
+	{
+		a = 48;
+		while (a < 58)
 		{
-			j = i % 10; /* singles digit */
-			k = i % 10; /* doubles digit */
-
-			if (k < j)
+			if (d != a && d < a)
 			{
-				putchar(k + '0');
-				putchar(j + '0');
+				putchar(d);
+				putchar(a);
 
-				if (i < 89)
+				if (!(d == 56 && a == 57))
 				{
-					putchar(44);
-					putchar(32);
+					putchar(',');
+					putchar('');
 				}
 			}
-
-			i++;
+			a++
 		}
+		d++
+	}
 	putchar('\n');
 
 	return (0);
