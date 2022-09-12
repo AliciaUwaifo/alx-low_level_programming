@@ -29,7 +29,7 @@ int main(void)
 			d = j % 10; /* singles snum */
 
 			if (a < c || (a == c && b < d))
-			{					 
+			{
 				putchar(a + '0');
 				putchar(b + '0');
 				putchar(32);
