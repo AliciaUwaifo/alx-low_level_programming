@@ -7,24 +7,27 @@
  */
 int main(void)
 {
-	unsigned long int prevfibonacci = 1;
-	unsigned long int fibonacci = 2;
-	int counter = 3;
-	unsigned long int swap;
+	int count = 2;
+	long int i = 1, j = 2;
+	long int k;
 
-	printf("%lu, %lu,", prevfibonacci, fibonacci);
-	while (counter <= 50)
+	printf("%lu, ", i);
+	while (count <= 50)
 	{
-		swap = fibonacci;
-		fibonacci = fibonacci + prevfibonacci;
-		if (counter != 50)
-			printf("%lu", fibonacci);
+		if (count == 50)
+		{
+			printf("%lu\n", j);
+		}
 		else
-			printf("%lu", fibonacci);
-		prevfibonacci = swap;
-		counter++;
+		{
+			printf("%lu, ", j);
+		}
+
+		k = j;
+		j += i;
+		i = k;
+		count++;
 	}
-	putchar('\n');
 
 	return (0);
 }
