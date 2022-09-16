@@ -1,1 +1,1 @@
-C - debugging program
+Debugging for beginner
